@@ -41,8 +41,9 @@ struct ContentView: View {
                     Circle()
                         .fill(notes.isEmpty ? Color.green : Color.red)
                         .frame(width: 12, height: 12)
-                        .accessibilityLabel(notes.isEmpty ? "No notes" : "Active notes")
-                        .accessibilityHint("Status indicator")
+                        .accessibilityLabel("Status indicator")
+                        .accessibilityValue(notes.isEmpty ? "No notes" : "Active notes")
+                        .accessibilityHint("Shows whether the note list contains active items")
                 }
                 .padding()
                 .background(Color(.systemGray6))
