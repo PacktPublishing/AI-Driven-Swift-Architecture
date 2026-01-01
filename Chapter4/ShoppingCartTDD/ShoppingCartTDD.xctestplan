@@ -1,0 +1,25 @@
+{
+  "configurations" : [
+    {
+      "id" : "0F5F92D9-06D9-4DF6-9991-D9B1A7065A2C",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "performanceAntipatternCheckerEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:ShoppingCartTDD.xcodeproj",
+        "identifier" : "6C9B55822EFD43A700DA18A7",
+        "name" : "ShoppingCartTDDTests"
+      }
+    }
+  ],
+  "version" : 1
+}
