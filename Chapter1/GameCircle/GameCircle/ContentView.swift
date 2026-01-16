@@ -6,13 +6,13 @@ private enum GameConfig {
     static let circleSize: CGFloat = 80
     static let padding: CGFloat = 16 // explicit padding used in layout and position math
     static let scoreIncrement: Int = 1
-    static let initialPosition = CGPoint(x: UIScreen.main.bounds.width / 2, y: UIScreen.main.bounds.height / 2)
 }
 
 // MARK: - Game State
-final class GameState: ObservableObject {
-    @Published private(set) var score: Int = 0
-    @Published private(set) var circlePosition: CGPoint? // optional to avoid layout flicker
+@Observable
+final class GameState {
+    private(set) var score: Int = 0
+    private(set) var circlePosition: CGPoint? // optional to avoid layout flicker
 
     init(initialPosition: CGPoint? = nil) {
         self.circlePosition = initialPosition
@@ -48,7 +48,7 @@ final class GameState: ObservableObject {
 
 // MARK: - Game View
 struct GameView: View {
-    @StateObject private var gameState = GameState()
+    @State private var gameState = GameState()
 
     var body: some View {
         GeometryReader { geometry in
@@ -57,7 +57,6 @@ struct GameView: View {
             let innerWidth = max(0, geometry.size.width - pad * 2)
             let innerHeight = max(0, geometry.size.height - pad * 2)
             let playHeight = innerHeight * 0.6
-            let playRect = CGRect(x: 0, y: 0, width: innerWidth, height: playHeight)
 
             VStack(spacing: 50) {
                 Text("Score: \(gameState.score)")
@@ -78,7 +77,7 @@ struct GameView: View {
                         // ensure initial placement and respond to size changes
                         Color.clear
                             .onAppear { gameState.updatePosition(in: bounds) }
-                            .onChange(of: playGeo.size) { _ in gameState.updatePosition(in: bounds) }
+                            .onChange(of: playGeo.size) { _, _ in gameState.updatePosition(in: bounds) }
 
                         if let pos = gameState.circlePosition {
                             Circle()
