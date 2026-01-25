@@ -1,0 +1,106 @@
+# Xcode
+#
+DerivedData/
+*.xcworkspace
+!default.xcworkspace
+xcuserdata/
+*.xcuserstate
+*.xccheckout
+*.xcscmblueprint
+.idea/
+
+# Xcode iOS Device Logs
+#
+*.deviceinfo
+*.plist
+*.log
+
+# Xcode Archives
+#
+*.xcarchive
+
+# Swift Package Manager
+#
+# Packages/
+.swiftpm/
+.build/
+Package.resolved
+Package.pins
+
+# CocoaPods
+#
+Pods/
+Podfile.lock
+
+# Carthage
+#
+Carthage/Build/
+Carthage/Checkouts/
+Carthage/Private/
+Carthage/Generated/
+
+# Fastlane
+#
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
+fastlane/test_output/**/*.log
+
+# Firebase configuration
+#
+GoogleService-Info.plist
+
+# Temporary files
+#
+*.moved-aside
+*.xcuserdatad
+*.xcscmblueprint
+*.swp
+*.lock
+*.swm
+*.DS_Store
+
+# SwiftPM Packages
+#
+.swiftpm/xcode/package.xcworkspace
+
+# Playgrounds
+#
+timeline.xctimeline
+playground.xcworkspace
+
+# Build generated files
+#
+build/
+Build/
+
+# iOS-specific files
+#
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Thumbnails
+#
+*.orig
+
+# macOS
+#
+*.DS_Store
+
+# Reveal App files
+#
+Reveal/
+
+# Xcode Backup files
+#
+*.xcuserstate
+
+# Other
+#
+*.orig
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
