@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct NewNoteView: View {
-    @Environment(\.dismiss) var dismiss
+    @Environment(\.dismiss) private var dismiss
     @State private var title = ""
     @State private var content: AttributedString = ""
     @Binding var notes: [Note]

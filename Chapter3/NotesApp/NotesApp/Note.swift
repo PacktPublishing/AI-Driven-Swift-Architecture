@@ -1,4 +1,4 @@
-import SwiftUI
+import Foundation
 
 struct Note {
     let id: Int

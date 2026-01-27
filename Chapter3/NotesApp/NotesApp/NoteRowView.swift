@@ -42,17 +42,17 @@ struct NoteRowView: View {
 
     private func priorityColor(_ priority: NotePriority) -> Color {
         switch priority {
-        case .high: return .red
-        case .medium: return .orange
-        case .low: return .green
+        case .high: .red
+        case .medium: .orange
+        case .low: .green
         }
     }
 
     private func priorityLabel(_ priority: NotePriority) -> String {
         switch priority {
-        case .high: return "high"
-        case .medium: return "medium"
-        case .low: return "low"
+        case .high: "high"
+        case .medium: "medium"
+        case .low: "low"
         }
     }
 }
