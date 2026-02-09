@@ -13,8 +13,7 @@ import ProductAbstraction
 
 extension DIContainer {
 
-    @MainActor
-    public static func registerProductService() {
+    @MainActor public static func registerProductService() {
 
         DIContainer.shared.register(ProductService.self) { _ in
 
@@ -26,8 +25,7 @@ extension DIContainer {
 
 extension DIContainer {
 
-    @MainActor
-    public static func registerProductRepository() {
+    @MainActor public static func registerProductRepository() {
 
         DIContainer.shared.register(ProductRepositoryProtocol.self) { _ in
 

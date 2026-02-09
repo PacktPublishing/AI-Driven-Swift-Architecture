@@ -56,7 +56,7 @@
 		38F43DDF2CBBFD2F002EACA3 /* LoginFeature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = LoginFeature; sourceTree = "<group>"; };
 		38F690BA2E58E099009220B0 /* Analytics */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Analytics; sourceTree = "<group>"; };
 		38F690BB2E58E099009220B0 /* Utils */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Utils; sourceTree = "<group>"; };
-		6CCE24FD2F0C1F6C000A4345 /* Data */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Data; path = "/Users/wsassi/Documents/AI-Driven-Swift-Architecture/Chapter5/EcommerceAppDemo-main/Packages/Data"; sourceTree = "<absolute>"; };
+		38F690BD2E58E0DD009220B0 /* Data */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Data; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -155,8 +155,8 @@
 		38E817B82CB84ED600086B2A /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				6CCE24FD2F0C1F6C000A4345 /* Data */,
 				38AB65E32CBA8A4900E1D034 /* Abstraction */,
+				38F690BD2E58E0DD009220B0 /* Data */,
 				38AB65E42CBA90F000E1D034 /* Domain */,
 				38AB65EC2CBACC2100E1D034 /* Presentation */,
 				38F690BC2E58E099009220B0 /* Utilities */,
@@ -513,7 +513,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MyEcommerce/Preview Content\"";
-				DEVELOPMENT_TEAM = 3BN9ZBCLTH;
+				DEVELOPMENT_TEAM = 458N84TBWR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -526,7 +526,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sephora.MyEcommerce;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Packt.MyEcommerce;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 6.0;
@@ -542,7 +542,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MyEcommerce/Preview Content\"";
-				DEVELOPMENT_TEAM = 3BN9ZBCLTH;
+				DEVELOPMENT_TEAM = 458N84TBWR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -555,7 +555,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sephora.MyEcommerce;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Packt.MyEcommerce;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 6.0;

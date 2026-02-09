@@ -13,8 +13,7 @@ import UserAbstraction
 
 public extension DIContainer {
 
-    @MainActor
-    static func registerUserService() {
+    @MainActor static func registerUserService() {
 
         DIContainer.shared.register(UserService.self) { _ in
 
@@ -25,8 +24,7 @@ public extension DIContainer {
 
 extension DIContainer {
 
-    @MainActor
-    public static func registerUserRepository() {
+    @MainActor public static func registerUserRepository() {
 
         DIContainer.shared.register(UserRepositoryProtocol.self) { _ in
 

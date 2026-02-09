@@ -6,8 +6,7 @@ import BasketAbstraction
 
 extension DIContainer {
 
-    @MainActor
-    public static func registerBasketService() {
+    @MainActor public static func registerBasketService() {
 
         DIContainer.shared.register(BasketService.self) { _ in
 
@@ -18,8 +17,7 @@ extension DIContainer {
 
 extension DIContainer {
 
-    @MainActor
-    public static func registerBasketRepository() {
+    @MainActor public static func registerBasketRepository() {
 
         DIContainer.shared.register(BasketRepositoryProtocol.self) { _ in
 
