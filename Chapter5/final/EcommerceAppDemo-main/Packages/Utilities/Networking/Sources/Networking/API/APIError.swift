@@ -1,6 +1,6 @@
 import Foundation
 
-enum APIError {
+public enum APIError {
     
     case invalidServerResponse
     

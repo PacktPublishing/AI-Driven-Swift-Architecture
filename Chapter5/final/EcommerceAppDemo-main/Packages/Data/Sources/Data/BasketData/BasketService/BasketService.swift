@@ -25,10 +25,10 @@ public struct BasketService {
         )
     }
 
-    func getBasket(userID: UUID) async throws -> [BasketDTO] {
+    func getBasket(userID: UUID) async throws -> [BasketItemDTO] {
 
         let response = try await apiProvider.perform(BasketAPI.getBasket(userID: userID))
-        return try response.decode([BasketDTO].self)
+        return try response.decode([BasketItemDTO].self)
     }
 }
 

@@ -1,6 +1,6 @@
 import Foundation
 
-struct BasketDTO: Codable {
+struct BasketItemDTO: Codable {
     
     var id: UUID
     

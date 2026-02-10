@@ -18,7 +18,7 @@ public final class APIResponse {
 
 extension APIResponse {
 
-    func parse<T: Decodable>(_ type: T.Type) throws -> T {
+    func parse<T: Decodable>(_ type: T.Type) throws(APIError) -> T {
 
         let jsonDecoder = JSONDecoder()
 
@@ -28,7 +28,7 @@ extension APIResponse {
     }
 
     // Convenience method for async/await pattern
-    public func decode<T: Decodable>(_ type: T.Type) throws -> T {
+    public func decode<T: Decodable>(_ type: T.Type) throws(APIError) -> T {
         try parse(type)
     }
 }

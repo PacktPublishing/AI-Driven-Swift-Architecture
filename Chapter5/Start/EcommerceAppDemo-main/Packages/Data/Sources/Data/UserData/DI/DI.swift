@@ -1,10 +1,3 @@
-//
-//  File.swift
-//  Data
-//
-//  Created by Brahim Lamri on 22/08/2025.
-//
-
 import Foundation
 
 import DIAbstraction

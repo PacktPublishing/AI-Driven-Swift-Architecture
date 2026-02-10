@@ -29,11 +29,11 @@ public struct BasketService {
             .map { _ in () }
     }
     
-    func getBasket(userID: UUID) -> Observable<[BasketDTO]> {
+    func getBasket(userID: UUID) -> Observable<[BasketItemDTO]> {
         
         apiProvider
             .perform(BasketAPI.getBasket(userID: userID))
-            .map([BasketDTO].self)
+            .map([BasketItemDTO].self)
     }
 }
 
