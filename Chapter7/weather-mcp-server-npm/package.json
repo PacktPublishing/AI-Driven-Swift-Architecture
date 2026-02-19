@@ -1,0 +1,22 @@
+{
+  "name": "weather-mcp-server-swift",
+  "version": "1.0.2",
+  "description": "Weather MCP server (Swift, macOS arm64)",
+  "bin": {
+    "weather-mcp-server-swift": "./bin/run.js"
+  },
+  "files": [
+    "bin",
+    "dist"
+  ],
+  "os": [
+    "darwin"
+  ],
+  "cpu": [
+    "arm64"
+  ],
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  }
+}
