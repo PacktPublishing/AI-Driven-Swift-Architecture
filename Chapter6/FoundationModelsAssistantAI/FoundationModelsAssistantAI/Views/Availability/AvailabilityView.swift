@@ -17,7 +17,9 @@ import SwiftUI
 struct AvailabilityView: View {
 
     /// The system language model instance used to check availability.
-    var model = SystemLanguageModel.default
+    private var model: SystemLanguageModel {
+        .default
+    }
 
     var body: some View {
         Form {
@@ -37,6 +39,10 @@ struct AvailabilityView: View {
     @ViewBuilder
     private var availabilityStatusView: some View {
         switch model.availability {
+        /// Should not happen: view is only presented when unavailable
+        case .available:
+
+            EmptyView()
 
         case .unavailable(.deviceNotEligible):
             VStack(alignment: .leading, spacing: 12) {
