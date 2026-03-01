@@ -1,5 +1,5 @@
 ---
-name: rxswift-to-asyncstream
+name: rxswift-to-async-await
 description: Migrates RxSwift networking code to native Swift async/await. Use when refactoring Observable-based API code, removing RxSwift dependencies, or modernizing to Swift Concurrency.
 ---
 
