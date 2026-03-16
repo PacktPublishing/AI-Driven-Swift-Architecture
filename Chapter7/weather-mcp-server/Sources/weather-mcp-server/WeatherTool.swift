@@ -65,6 +65,7 @@ struct WeatherTool: Sendable {
         name: "get_weather",
         description: "Get current weather for a city using the OpenWeatherMap API.",
         inputSchema: .object([
+            "type": .string("object"),
             "properties": .object([
                 "city": .object([
                     "type": .string("string"),
