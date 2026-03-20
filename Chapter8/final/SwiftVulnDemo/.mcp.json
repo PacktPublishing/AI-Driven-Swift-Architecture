@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "weather": {
+      "command": "/usr/local/bin/weather-mcp-server-swift",
+      "env": {
+          "OPENWEATHER_API_KEY": "YOUR_OPENWEATHER_API_KEY_HERE"
+        }
+    }
+  }
+}
