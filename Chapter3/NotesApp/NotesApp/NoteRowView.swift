@@ -2,42 +2,50 @@ import SwiftUI
 
 struct NoteRowView: View {
     let note: Note
+    var onDelete: () -> Void = {}
 
     var body: some View {
         HStack(spacing: 8) {
-            // Priority indicator with accessibility
+            // Priority indicator
             Rectangle()
                 .fill(priorityColor(note.priority))
                 .frame(width: 4)
-                .accessibilityHidden(true) // Hidden because priority is communicated via label
+                .accessibilityHidden(true) // Communicated via parent accessibility label
 
             VStack(alignment: .leading, spacing: 4) {
                 Text(note.title)
                     .font(.headline)
+                    .foregroundColor(.primary)
 
                 Text(note.content)
-                    .font(.caption)
-                    .foregroundColor(.gray)
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
                     .lineLimit(1)
             }
+            .accessibilityElement(children: .combine)
+            .accessibilityLabel("\(note.title), \(priorityLabel(note.priority)) priority, \(note.content)")
+            .accessibilityIdentifier("note-info-\(note.id)")
 
             Spacer()
 
-            // Delete button with proper accessibility
-            Button(action: {}) {
+            // Delete button with compliant touch target and Dynamic Type scaling
+            Button(role: .destructive, action: onDelete) {
                 Image(systemName: "trash")
+                    .font(.body)
                     .foregroundColor(.red)
-                    .font(.system(size: 14))
+                    .frame(width: 44, height: 44)
+                    .contentShape(Rectangle())
             }
-            .frame(width: 44, height: 44)  // Minimum 44x44 touch target
-            .accessibilityLabel("Delete \(note.title) note")
-            .accessibilityHint("Double tap to delete this note")
+            .buttonStyle(.plain)
+            .accessibilityLabel("Delete \(note.title)")
+            .accessibilityHint("Permanently deletes this note")
             .accessibilityIdentifier("delete-note-\(note.id)")
         }
-        .padding(.vertical, 8)
-        .accessibilityElement(children: .combine)
-        .accessibilityLabel("\(note.title), \(priorityLabel(note.priority)) priority, \(note.content)")
-        .accessibilityHint("Double tap to view or edit note")
+        .padding(.vertical, 4)
+        .accessibilityElement(children: .contain)
+        .accessibilityAction(named: "Delete \(note.title)") {
+            onDelete()
+        }
     }
 
     private func priorityColor(_ priority: NotePriority) -> Color {
